@@ -22,6 +22,22 @@ Maven coordinate: `de.drremote:dsp408-protocol:0.1.0-SNAPSHOT`. The JAR is also
 an OSGi bundle and exports `de.drremote.dsp408.protocol` with package version
 `0.1.0`.
 
+## Automated verification draft
+
+The [draft GitHub Actions workflow](.github/workflows/verify.yml) prepares a
+Java 21 verification build on pushes, pull requests and manual runs. It uses
+pinned action revisions and a fresh temporary Maven repository without a
+dependency cache. Automated tests use synthetic frames and saved data, with
+no physical DSP connection.
+
+The planned source repository is `DoctorRemoteControl/dsp408-protocol`.
+Publication and the first hosted run are still pending; the local workflow
+does not establish that GitHub verification has passed. Raider and the proxy
+each lock this library's source commit in `ci/protocol-revision`, check out
+that exact revision and install it before their own builds. This repository
+does not currently publish a Maven package. Repository visibility and a
+license remain owner decisions.
+
 ## Choosing the right API
 
 | API | Purpose / boundary |
