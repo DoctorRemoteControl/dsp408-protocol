@@ -1,5 +1,4 @@
-# Draft: source publication and the first hosted run are still pending.
-name: Verify (draft)
+name: Verify
 
 on: [push, pull_request, workflow_dispatch]
 
